@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Incremental</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <script type="text/javascript" src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./script.js"></script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5445093614597127" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card" style="margin-top: 1.5vh;">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h3>Nivel <span id="Nivel">1</span><span class="Subtitulo">To next level: <span id="PixelToNextLvl">289</span> pixels.</span></h3>
+                                    <p id="Interrogations">?????</p>
+                                    <p id="PixCoins" class="Ocultar">PixCoins: <span id="ActualPixCoins">0</span>. On reset you will have: <span id="NextPixCoins">0</span> PixCoins.</p>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <h3>Incremental Pixel Game</h3>
+                                    <p>You have <span id="Pixeles">0</span> pixels.</p>
+                                </div>
+                                <div class="col-3 text-center">
+                                    <!-- <button class="btn btn-info" onclick="HardReset()">Hard Reset</button> -->
+                                    <button id="Btn-ResetGame" class="btn btn-info Ocultar" onclick="ResetGame()">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="Titles">
+                                        <h3>Click Upgrades</h3>
+                                    </div>
+                                    <div class="Mejoras" onclick="ActiveDmg()">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <p class="Titulo">Active Dmg</p>
+                                                <p class="Incremento">+1 active Dmg</p>
+                                                <p class="Total">Each click deals <span id="Dano">1</span></p>
+                                            </div>
+                                            <div class="col-4 text-center">
+                                                <p class="Coste"><span id="Dano_Cost">12</span> pix</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Mejoras Disabled" onclick="ActiveMultiClick()">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <p class="Titulo">Active Multiclick</p>
+                                                <p class="Incremento">+1 block Dmg</p>
+                                                <p class="Total"><span id="ExtraHits">0</span> blocks hit extra</p>
+                                            </div>
+                                            <div class="col-4 text-center">
+                                                <p class="Coste"><span id="ExtraHits_Cost">100</span> pix</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div id="PixCoinsUpgrades" class="Ocultar">
+                                        <div class="Titles">
+                                            <h3>PixCoins Upgrades</h3>
+                                        </div>
+                                        <div class="Mejoras" onclick="IdleHittersInterval()">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <p class="Titulo">Idle Hitters Interval</p>
+                                                    <p class="Incremento">-0.1 secconds reduce interval</p>
+                                                    <p class="Total">Each idle hitter clicks every <span id="IdleHittersInterval">5</span></p>
+                                                </div>
+                                                <div class="col-4 text-center">
+                                                    <p class="Coste"><span id="IdleHittersInterval_Cost">0.1</span> PixCoins</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="Cuadrado grid-container" property="289" title="1">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="Titles">
+                                        <h3>Idle Hitters Upgrades</h3>
+                                    </div>
+                                    <div class="Mejoras" onclick="IdleHitters()">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <p class="Titulo">Idle Hitters</p>
+                                                <p class="Incremento">+1 idle hitter</p>
+                                                <p class="Total">You have <span id="IdleHitters">1</span> idle hitters</p>
+                                            </div>
+                                            <div class="col-4 text-center">
+                                                <p class="Coste"><span id="IdleHitters_Cost">20</span> pix</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Mejoras" onclick="IdleHittersDmg()">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <p class="Titulo">Idle Hitters Dmg</p>
+                                                <p class="Incremento">+1 idle Dmg</p>
+                                                <p class="Total"><span id="IdleDmg">1</span> per idle hit</p>
+                                            </div>
+                                            <div class="col-4 text-center">
+                                                <p class="Coste"><span id="IdleDmg_Cost">70</span> pix</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Mejoras" onclick="IdleHittersCrit()">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <p class="Titulo">Idle Hitter Crit.</p>
+                                                <p class="Incremento">+1% crit. prob</p>
+                                                <p class="Total"><span id="IdleCritHit">0</span>% for 2x idle dmg</p>
+                                            </div>
+                                            <div class="col-4 text-center">
+                                                <p class="Coste"><span id="IdleCritHit_Cost">50</span> pix</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div id="Visitas">
+                                <h3>Visits</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        $(function () {
+            for (let i = 0; i < 289; i++) {
+
+                $(".Cuadrado").append('<div class="grid-item Pixel"></div>');
+            }
+
+            RegistrarVisita();
+            ObtenerVisitas();
+            var PixelesInicio = getCookie("Pixeles");
+            if (PixelesInicio != null && PixelesInicio != '' && PixelesInicio != 'NaN') {
+                RecuperarGuardado();
+            } else {
+                ModificarInterval(5000);
+            }
+
+            $('.Pixel').text($(".Cuadrado").attr("title"));
+
+            $('.Pixel').on('click', function (e) {
+                Pixel(this)
+            });
+
+            var AutoGuardado = setInterval(function () {
+                Guardado();
+            }, 20000);
+        });
+    </script>
+</body>
+</html>

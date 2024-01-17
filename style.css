@@ -1,0 +1,104 @@
+.content {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.card-header {
+    background-color: #3a3afd;
+    color: #5dedfb;
+    font-family: monospace;
+}
+
+.card-footer {
+    background-color: #3a3afd;
+    color: #5dedfb;
+    font-family: monospace;
+}
+
+.Subtitulo {
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+.btn {
+    height: 100%;
+    width: 200px;
+}
+
+.Titles {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    background-color: #3a3afd;
+    color: #5dedfb;
+    font-family: monospace;
+}
+
+.Mejoras {
+    height: 80px;
+    width: 100%;
+    border: 2px solid blue;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    background-color: #3a3afd;
+    color: #5dedfb;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.Coste {
+    margin-top: 10px;
+    height: 60px;
+    width: 90%;
+    border: 1px dashed #5dedfb;
+    vertical-align: middle;
+    line-height: 55px;
+}
+
+p {
+    margin-bottom: 0px !important;
+    margin-left: 10px;
+}
+
+.Cuadrado {
+    aspect-ratio: 1;
+    margin-left: 4%; 
+    border: 2px solid blue;
+    background-color: #3a3afd;
+    color: #5dedfb;
+}
+
+.Pixel {
+    background-color: #031683;
+}
+
+.Ticado {
+    background-color: #3f2dff;
+}
+
+.Disabled {
+    pointer-events: none !important;
+    opacity: 0.5;
+}
+
+.Ocultar {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+    gap: 1px;
+  }
+
+  .grid-item {
+    width: 100%;
+    padding: 5px;
+  }
