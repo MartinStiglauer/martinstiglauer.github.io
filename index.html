@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" js ">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,171 +8,133 @@
     <title>Martin Stiglauer Github</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
-    <script type="text/javascript" src="script.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link href="./style.css" rel="stylesheet">
-    <script src="./script.js"></script>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5445093614597127" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5445093614597127"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+    <!--<script type="text/javascript" src="script.js"></script>-->
+    <script src="./assets/js/main.min.js"></script>
 </head>
-<body>
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card" style="margin-top: 1.5vh;">
-                        <div class="card-header">
-                            <div class="row">
-                                <div class="col-3">
-                                    <h3>Nivel <span id="Nivel">1</span><span class="Subtitulo">To next level: <span id="PixelToNextLvl">289</span> pixels.</span></h3>
-                                    <p id="Interrogations">?????</p>
-                                    <p id="PixCoins" class="Ocultar">PixCoins: <span id="ActualPixCoins">0</span>. On reset you will have: <span id="NextPixCoins">0</span> PixCoins.</p>
-                                </div>
-                                <div class="col-6 text-center">
-                                    <h3>Incremental Pixel Game</h3>
-                                    <p>You have <span id="Pixeles">0</span> pixels.</p>
-                                </div>
-                                <div class="col-3 text-center">
-                                    <!-- <button class="btn btn-info" onclick="HardReset()">Hard Reset</button> -->
-                                    <button id="Btn-ResetGame" class="btn btn-info Ocultar" onclick="ResetGame()">Reset</button>
-                                </div>
-                            </div>
+
+<body class="layout--home" style="background-color: #252a34;">
+    <div class="masthead">
+        <div class="masthead__inner-wrap">
+            <div class="masthead__menu">
+                <nav id="site-nav" class="greedy-nav">
+
+                    <a class="site-title" href="/">
+                        Martin Stiglauer Github
+                    </a>
+
+                    <button class="greedy-nav__toggle hidden" type="button" count="0">
+                        <span class="visually-hidden">Toggle menu</span>
+                        <div class="navicon"></div>
+                    </button>
+                    <ul class="hidden-links hidden"></ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="initial-content">
+        <div id="main" role="main">
+            <div class="sidebar sticky">
+                <div itemscope="" itemtype="https://schema.org/Person">
+                    <div class="author__avatar">
+                        <img src="./assets/images/martinstiglauer.png" alt="MartinStiglauer" itemprop="image">
+                    </div>
+                    <div class="author__content">
+                        <h3 class="author__name" itemprop="name">Martin Stiglauer</h3>
+                        <div class="author__bio" itemprop="description">
+                            <p>I dont have a full description of me, im just a developer, focused more on back-end, but working as Full-Stack.</p>
+                            <p>I usually work on .Net as back, front just basic.</p>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="Titles">
-                                        <h3>Click Upgrades</h3>
-                                    </div>
-                                    <div class="Mejoras" onclick="ActiveDmg()">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p class="Titulo">Active Dmg</p>
-                                                <p class="Incremento">+1 active Dmg</p>
-                                                <p class="Total">Each click deals <span id="Dano">1</span></p>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <p class="Coste"><span id="Dano_Cost">12</span> pix</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="Mejoras Disabled" onclick="ActiveMultiClick()">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p class="Titulo">Active Multiclick</p>
-                                                <p class="Incremento">+1 block Dmg</p>
-                                                <p class="Total"><span id="ExtraHits">0</span> blocks hit extra</p>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <p class="Coste"><span id="ExtraHits_Cost">100</span> pix</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div id="PixCoinsUpgrades" class="Ocultar">
-                                        <div class="Titles">
-                                            <h3>PixCoins Upgrades</h3>
-                                        </div>
-                                        <div class="Mejoras" onclick="IdleHittersInterval()">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <p class="Titulo">Idle Hitters Interval</p>
-                                                    <p class="Incremento">-0.1 secconds reduce interval</p>
-                                                    <p class="Total">Each idle hitter clicks every <span id="IdleHittersInterval">5</span></p>
-                                                </div>
-                                                <div class="col-4 text-center">
-                                                    <p class="Coste"><span id="IdleHittersInterval_Cost">0.1</span> PixCoins</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <div class="Cuadrado grid-container" property="289" title="1">
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="Titles">
-                                        <h3>Idle Hitters Upgrades</h3>
-                                    </div>
-                                    <div class="Mejoras" onclick="IdleHitters()">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p class="Titulo">Idle Hitters</p>
-                                                <p class="Incremento">+1 idle hitter</p>
-                                                <p class="Total">You have <span id="IdleHitters">1</span> idle hitters</p>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <p class="Coste"><span id="IdleHitters_Cost">20</span> pix</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="Mejoras" onclick="IdleHittersDmg()">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p class="Titulo">Idle Hitters Dmg</p>
-                                                <p class="Incremento">+1 idle Dmg</p>
-                                                <p class="Total"><span id="IdleDmg">1</span> per idle hit</p>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <p class="Coste"><span id="IdleDmg_Cost">70</span> pix</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="Mejoras" onclick="IdleHittersCrit()">
-                                        <div class="row">
-                                            <div class="col-8">
-                                                <p class="Titulo">Idle Hitter Crit.</p>
-                                                <p class="Incremento">+1% crit. prob</p>
-                                                <p class="Total"><span id="IdleCritHit">0</span>% for 2x idle dmg</p>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <p class="Coste"><span id="IdleCritHit_Cost">50</span> pix</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div id="Visitas">
-                                <h3>Visits</h3>
-                            </div>
-                        </div>
+                    </div>
+
+                    <div class="author__urls-wrapper">
+                        <ul class="author__urls social-icons">
+                            <!-- <li itemprop="homeLocation" itemscope="" itemtype="https://schema.org/Place">
+                                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">PID
+                                    0</span>
+                            </li> -->
+                            <li><a href="https://martinstiglauer.github.io/" rel="nofollow noopener noreferrer"><i
+                                        class="fas fa-fw fa-link" aria-hidden="true"></i><span
+                                        class="label">Website</span></a></li>
+                            <li><a href="https://es.linkedin.com/in/martin-stiglauer-4a4782163"
+                                    rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin"
+                                        aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+                            <!-- <li><a href="https://twitter.com/MartinStiglauer" rel="nofollow noopener noreferrer"><i
+                                        class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span
+                                        class="label">Twitter</span></a></li> -->
+                            <li><a href="https://github.com/MartinStiglauer" rel="nofollow noopener noreferrer"><i
+                                        class="fab fa-fw fa-github" aria-hidden="true"></i><span
+                                        class="label">GitHub</span></a></li>
+                            <li>
+                                <a href="mailto:martinstiglauer@outlook.com">
+                                    <meta itemprop="email" content="martinstiglauer@outlook.com">
+                                    <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span
+                                        class="label">Email</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
+
+            <div class="archive">
+                <h1 id="page-title" class="page__title"></h1>
+                <h3 class="archive__subtitle">Games</h3>
+                <div class="entries-list">
+                    <div class="list__item">
+                        <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+                            <h2 class="archive__item-title no_toc" itemprop="headline">
+                                <a href="/IncrementalGame_Pixeles" rel="permalink">Incremental Pixel Game</a>
+                            </h2>
+                            <p class="archive__item-excerpt" itemprop="description">This incremental game, is made only with html, css and js. 
+                                Its not finished, but can be played. Hit the boxes as fast as you can and make progress to make the machine do it for you.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+                <br>
+                <h3 class="archive__subtitle">Public Github Repos</h3>
+                <div class="entries-list">
+                    <div class="list__item">
+                        <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+                            <h2 class="archive__item-title no_toc" itemprop="headline">
+                                <a href="https://github.com/MartinStiglauer/Telegram-Send-Messages-to-Entire-Folder" rel="permalink">Telegram Send Messages to Entire Folder</a>
+                            </h2>
+                            <p class="archive__item-excerpt" itemprop="description">Made in C#, login into your telegram account and send messages to all the people inside your folders. 
+                                It is normally used to broadcast messages to a group of people
+                            </p>
+                        </article>
+                    </div>
+                    <div class="list__item">
+                        <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+                            <h2 class="archive__item-title no_toc" itemprop="headline">
+                                <a href="https://github.com/MartinStiglauer/IncrementalGame_Pixeles" rel="permalink">Incremental Pixel Game</a>
+                            </h2>
+                            <p class="archive__item-excerpt" itemprop="description">Made only in html, css and js. This is the repo of the game.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
-
-    <script type="text/javascript">
-        $(function () {
-            for (let i = 0; i < 289; i++) {
-
-                $(".Cuadrado").append('<div class="grid-item Pixel"></div>');
-            }
-
-            //RegistrarVisita();
-            //ObtenerVisitas();
-            var PixelesInicio = getCookie("Pixeles");
-            if (PixelesInicio != null && PixelesInicio != '' && PixelesInicio != 'NaN') {
-                RecuperarGuardado();
-            } else {
-                ModificarInterval(5000);
-            }
-
-            $('.Pixel').text($(".Cuadrado").attr("title"));
-
-            $('.Pixel').on('click', function (e) {
-                Pixel(this)
-            });
-
-            var AutoGuardado = setInterval(function () {
-                Guardado();
-            }, 20000);
-        });
-    </script>
+    </div>
 </body>
+
 </html>
